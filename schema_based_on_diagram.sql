@@ -36,7 +36,7 @@ CREATE DATABASE clinic
 
     ---create table INVOICE_ITEMS
     CREATE TABLE invoice_items(
-        id SERIAL PRIMARY KEY,
+      id SERIAL PRIMARY KEY,
         unit_price DECIMAL,
         quantity INT,
         total_price DECIMAL,
@@ -44,13 +44,13 @@ CREATE DATABASE clinic
         treatment_id INT
     );
  -- create invoice_items
- ALTER TABLE invoice_items
-ADD CONSTRAINT fk_invoice_items_invoice_id
-FOREIGN KEY ( invoice_id)
-REFERENCES invoices (id),
-ADD CONSTRAINT fk_invoice_items_treatment_id
-FOREIGN KEY ( treatment_id)
-REFERENCES treadments (id);
+    ALTER TABLE invoice_items
+    ADD CONSTRAINT fk_invoice_items_invoice_id
+    FOREIGN KEY ( invoice_id)
+    REFERENCES invoices (id),
+    ADD CONSTRAINT fk_invoice_items_treatment_id
+    FOREIGN KEY ( treatment_id)
+    REFERENCES treadments (id);
 
     --CREATE TABLE TREADMENTS
     CREATE TABLE treadments(
