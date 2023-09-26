@@ -20,7 +20,7 @@
 - [📝 License](#license)
 
 
-#  Vet Clinic <a name="about-project"></a>
+#  Clinic Db <a name="about-project"></a>
 
 **Clinic database** is a relational database created for a clinic. It consists of tables with data about:
 
