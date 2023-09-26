@@ -65,7 +65,7 @@ CREATE TABLE medical_history_treatments(
     treatment_id INT,
     PRIMARY KEY (medical_history_id, treatment_id),
     FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
-     FOREIGN KEY (treatment_id) REFERENCES treatments (id),
+     FOREIGN KEY (treatment_id) REFERENCES treadments (id)
 
 );
 -- create INDEX
