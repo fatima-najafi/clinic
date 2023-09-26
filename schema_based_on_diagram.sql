@@ -7,8 +7,6 @@ CREATE DATABASE clinic
     date_of_birth DATE  NOT NULL
 
  );
-
-
  --CEATE THE MEDICAL HISTORIES
  CREATE TABLE medical_histories(
     id SERIAL PRIMARY KEY,
