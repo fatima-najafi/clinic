@@ -1,6 +1,5 @@
 --create databse 
 CREATE DATABASE clinic
-
 -- create the patients table
  CREATE TABLE patients(
     id SERIAL PRIMARY KEY,
