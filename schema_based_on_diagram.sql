@@ -52,7 +52,7 @@ CREATE DATABASE clinic
     FOREIGN KEY ( treatment_id)
     REFERENCES treadments (id);
 
-    --CREATE TABLE TREADMENTS
+--CREATE TABLE TREADMENTS
     CREATE TABLE treadments(
         id SERIAL PRIMARY KEY,
         type VARCHAR (150) NOT NULL,
