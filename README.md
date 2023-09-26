@@ -143,6 +143,6 @@ I would like to thank Microverse for giving me the necessary knowledge for this 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Bupilipili/vet_clinic/blob/development/MIT.md) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
