@@ -29,11 +29,10 @@ CREATE DATABASE clinic
     medical_history_id INT
     );
   -- create forign KEY for invoices
- ALTER TABLE invoices
-ADD CONSTRAINT fk_invoice_id
-FOREIGN KEY (medical_history_id)
-REFERENCES medical_histories (id);
-
+    ALTER TABLE invoices
+    ADD CONSTRAINT fk_invoice_id
+    FOREIGN KEY (medical_history_id)
+    REFERENCES medical_histories (id);
 
     ---create table INVOICE_ITEMS
     CREATE TABLE invoice_items(
