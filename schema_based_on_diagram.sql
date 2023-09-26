@@ -22,11 +22,11 @@ CREATE DATABASE clinic
 
  --CREATE THE invoices
     CREATE TABLE invoices (
-        id SERIAL PRIMARY KEY,
-        total_amount DECIMAL,
-        generated_at TIMESTAMP,
-        payed_id TIMESTAMP,
-        medical_history_id INT
+    id SERIAL PRIMARY KEY,
+     total_amount DECIMAL,
+     generated_at TIMESTAMP,
+    payed_id TIMESTAMP,
+    medical_history_id INT
     );
   -- create forign KEY for invoices
  ALTER TABLE invoices
