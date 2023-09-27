@@ -52,7 +52,7 @@ CREATE DATABASE clinic
     FOREIGN KEY ( treatment_id)
     REFERENCES treadments (id);
 
---CREATE TABLE TREADMENTS
+    --CREATE TABLE TREADMENTS
     CREATE TABLE treadments(
         id SERIAL PRIMARY KEY,
         type VARCHAR (150) NOT NULL,
@@ -65,7 +65,8 @@ CREATE TABLE medical_history_treatments(
     treatment_id INT,
     PRIMARY KEY (medical_history_id, treatment_id),
     FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
-     FOREIGN KEY (treatment_id) REFERENCES treadments (id)
+     FOREIGN KEY (treatment_id) REFERENCES treatments (id),
 
 );
+
 -- create INDEX
