@@ -53,7 +53,7 @@ CREATE DATABASE clinic
     REFERENCES treadments (id);
 
     --CREATE TABLE TREADMENTS
-    CREATE TABLE treadments(
+    CREATE TABLE treatments(
         id SERIAL PRIMARY KEY,
         type VARCHAR (150) NOT NULL,
         name VARCHAR (100) NOT NULL
@@ -65,8 +65,14 @@ CREATE TABLE medical_history_treatments(
     treatment_id INT,
     PRIMARY KEY (medical_history_id, treatment_id),
     FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
-     FOREIGN KEY (treatment_id) REFERENCES treatments (id),
+     FOREIGN KEY (treatment_id) REFERENCES treatments (id)
 
 );
 
 -- create INDEX
+CREATE INDEX idx_medical_history_treatments_medical_history_id ON medical_history_treatments(medical_history_id);
+CREATE INDEX idx_medical_history_treatments_treatment_id ON medical_history_treatments (treatment_id);
+CREATE INDEX idx_invoice_items_invoice_id ON invoice_items (invoice_id);
+CREATE INDEX idx_invoice_items_treatment_id ON invoice_items (treatment_id);
+CREATE INDEX idx_invoices_medical_history_id ON invoices (medical_history_id);
+CREATE INDEX idx_medical_histories_patient_id ON medical_histories (patient_id);
