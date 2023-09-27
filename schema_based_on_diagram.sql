@@ -68,4 +68,43 @@ CREATE TABLE medical_history_treatments(
      FOREIGN KEY (treatment_id) REFERENCES treadments (id)
 
 );
--- create INDEX
+
+
+-- Create the join tables for many-to-many relationships
+
+-- CREATE TABLE doctors_patients (many-to-many relationship between doctors and patients)
+CREATE TABLE doctors_patients (
+    doctor_id INT,
+    patient_id INT,
+    PRIMARY KEY (doctor_id, patient_id),
+    FOREIGN KEY (doctor_id) REFERENCES doctors(id),
+    FOREIGN KEY (patient_id) REFERENCES patients(id)
+);
+
+-- CREATE TABLE treatments_patients (many-to-many relationship between treatments and patients)
+CREATE TABLE treatments_patients (
+    treatment_id INT,
+    patient_id INT,
+    PRIMARY KEY (treatment_id, patient_id),
+    FOREIGN KEY (treatment_id) REFERENCES treatments(id),
+    FOREIGN KEY (patient_id) REFERENCES patients(id)
+);
+
+-- CREATE TABLE appointments_patients (many-to-many relationship between appointments and patients)
+CREATE TABLE appointments_patients (
+    appointment_id INT,
+    patient_id INT,
+    PRIMARY KEY (appointment_id, patient_id),
+    FOREIGN KEY (appointment_id) REFERENCES appointments(id),
+    FOREIGN KEY (patient_id) REFERENCES patients(id)
+);
+
+-- CREATE TABLE appointments_doctors (many-to-many relationship between appointments and doctors)
+CREATE TABLE appointments_doctors (
+    appointment_id INT,
+    doctor_id INT,
+    PRIMARY KEY (appointment_id, doctor_id),
+    FOREIGN KEY (appointment_id) REFERENCES appointments(id),
+    FOREIGN KEY (doctor_id) REFERENCES doctors(id)
+);
+
